@@ -16,6 +16,7 @@ jobs:
                    unzip packer_1.3.1_linux_amd64.zip
                    rm packer_1.3.1_linux_amd64.zip
                    cd ../
+                   echo $AWS_ACCESS_KEY_ID
       - run:
           name: validate packer
           command: ./local_bin/packer validate packer/ami.json
