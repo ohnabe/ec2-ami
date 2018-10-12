@@ -6,16 +6,16 @@ jobs:
     steps:
       - checkout
       - run:
-           name: install packer and ansible
-           command: |
-      	     apt-get -y update
-	     apt-get install -y ansible curl unzip
-	     curl -O https://releases.hashicorp.com/packer/1.3.1/packer_1.3.1_linux_amd64.zip
-	     unzip packer_1.3.1_linux_amd64.zip
-	     rm packer_1.3.1_linux_amd64.zip
+          name: install packer and ansible
+          command: |
+                   apt-get -y update
+                   apt-get install -y ansible curl unzip
+                   curl -O https://releases.hashicorp.com/packer/1.3.1/packer_1.3.1_linux_amd64.zip
+                   unzip packer_1.3.1_linux_amd64.zip
+                   rm packer_1.3.1_linux_amd64.zip
       - run:
           name: validate packer
           command: ./packer validate packer/ami.json
       - run:
-	  name: build packer
-	  command: ./packer build packer/ami.json
+          name: build packer
+          command: ./packer build packer/ami.json
