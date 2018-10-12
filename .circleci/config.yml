@@ -10,12 +10,15 @@ jobs:
           command: |
                    apt-get -y update
                    apt-get install -y ansible curl unzip
+		   mkdir local_bin
+		   cd local_bin
                    curl -O https://releases.hashicorp.com/packer/1.3.1/packer_1.3.1_linux_amd64.zip
                    unzip packer_1.3.1_linux_amd64.zip
                    rm packer_1.3.1_linux_amd64.zip
+		   cd ../
       - run:
           name: validate packer
-          command: ./packer validate packer/ami.json
+          command: ./local_bin/packer validate packer/ami.json
       - run:
           name: build packer
-          command: ./packer build packer/ami.json
+          command: ./local_bin/packer build packer/ami.json
