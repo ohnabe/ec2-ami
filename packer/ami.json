@@ -32,7 +32,8 @@
 	"inline": [
 	    "sudo apt update",
 	    "sudo apt install -y python-simplejson",
-	    "sudo echo `date`' - packer provisioned this AMI' > /home/ubuntu/packer_provisioners"
+	    "sudo echo `date`' - packer provisioned this AMI' > /home/ubuntu/packer_provisioners",
+	    "sudo apt install -y emacs"
 	]
     }]
 }
