@@ -11,7 +11,7 @@
 	"source_ami_filter": {
 	    "filters": {
 		"virtualization-type": "hvm",
-		"name": "amazon/*Deep Learning AMI (Ubuntu) Version 10.0*",
+		"name": "amazon/*Deep Learning AMI (Ubuntu) Version*",
 		"root-device-type": "ebs"
 	    },
 	    "owners": ["898082745236"],
